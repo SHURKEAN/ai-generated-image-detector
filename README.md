@@ -1,41 +1,140 @@
 # AI-Generated Image Detector
 
-This repository contains the research code and a local Gradio demonstration for detecting whether an image is likely real or AI-generated.
+A Gradio application that estimates whether an uploaded image is real or AI-generated. It reports the predicted class, model-estimated confidence, AI probability, detector version, interpretation note, and individual model scores where available.
 
-The published CIFAKE study evaluates ResNet-50, EfficientNetV2-S, ViT-B/16, Xception, and a weighted soft-voting ensemble. The application also includes a normal-resolution route intended for more realistic photographs. An AI-image detector is probabilistic: its output should be treated as an estimate, not proof of an image's origin.
+The detector is intended for research and screening. Its output is probabilistic and must not be treated as forensic proof of an image's origin.
 
-## Run the demo locally
+## Current detector design
 
-Use Python 3.11 and install the application requirements:
+The application supports two main inference routes:
+
+- **Normal-resolution images:** the Community Forensics ViT-S/16 detector is used for broader cross-generator screening.
+- **CIFAKE-scale images:** images whose longest side is at most 64 pixels can use the published four-model CIFAKE ensemble.
+
+The published ensemble combines ResNet-50, EfficientNetV2-S, ViT-B/16, and Xception using weighted soft voting. It achieved 99.07% accuracy on the balanced 20,000-image CIFAKE test split. That result describes the CIFAKE benchmark and is not a claim of universal accuracy on arbitrary photographs or unseen generators.
+
+## Features
+
+- Upload and analyze one image at a time
+- Real or AI-generated prediction
+- Model-estimated confidence and AI probability
+- Transparent detector-version and routing information
+- Individual model scores when using the published ensemble
+- Automatic CUDA use when available, with CPU support
+- Lazy model loading and reuse between requests
+- 20 MB upload limit and periodic temporary-file cleanup
+
+## Requirements
+
+- Python 3.11
+- Windows, Linux, or macOS
+- A CUDA-capable GPU is optional; CPU inference is supported
+- Sufficient disk space for the selected model assets
+
+## Installation
+
+From the repository root, create a Python 3.11 virtual environment and install the application dependencies.
+
+### PowerShell
 
 ```powershell
+py -3.11 -m venv .venv-app
+.\.venv-app\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -r requirements-app.txt
-python app\app.py
 ```
 
-Model weights are deliberately not stored in Git. Place the required checkpoints in `models/` as described by the project documentation before starting the app.
+## Model assets
 
-## Repository layout
+Model weights are intentionally excluded from Git because they are large. The normal-resolution reference assets can be downloaded and SHA-256 verified with:
 
-- `app/` — Gradio interface and inference pipeline
-- `realworld_v2/` — normal-resolution detector components
-- `scripts/` and `tests/` — utilities and tests
+```powershell
+.\scripts\download_realworld_assets.ps1
+```
 
-The paper, competition submission, research figures, presentations, and working documentation are retained locally and are not included in the public repository.
+The script stores the assets under `models/realworld_v2/upstream/`. Review the upstream model licences and intended research usage before redistribution or deployment.
 
-## What is not uploaded
+The published CIFAKE route additionally requires these locally retained checkpoints:
 
-Datasets, checkpoints, virtual environments, logs, credentials, prediction caches, package installers, papers, competition material, research figures, presentations, and working documentation are ignored by `.gitignore`. In particular, never upload `kaggle.json`.
+```text
+models/tuned/resnet50_hyperparameter_tuned_best.pth
+models/tuned/efficientnetv2s_hyperparameter_tuned_best.pth
+models/tuned/vit16_hyperparameter_tuned_best.pth
+models/tuned/xception_hyperparameter_tuned_best.pth
+```
 
-## Before publishing
+Their expected sizes and SHA-256 hashes are recorded in `models/published_ctds_v1/manifest.json`. The application does not retrain or silently replace them.
 
-Run the test suite and review exactly what will be committed:
+## Running the application
+
+For the public setup using the downloadable Community Forensics model:
+
+```powershell
+$env:AI_DETECTOR_MODE = "community"
+python -m app.app
+```
+
+Open the local Gradio address shown in the terminal, upload an image, and select **Analyze**.
+
+If all local model assets are available, the default adaptive mode can be used:
+
+```powershell
+Remove-Item Env:AI_DETECTOR_MODE -ErrorAction SilentlyContinue
+python -m app.app
+```
+
+### Runtime settings
+
+| Variable | Value | Effect |
+|---|---|---|
+| `AI_DETECTOR_MODE` | `auto` | Default adaptive routing between normal-resolution and CIFAKE-scale inputs. |
+| `AI_DETECTOR_MODE` | `community` | Always use the Community Forensics detector. |
+| `AI_DETECTOR_MODE` | `published` | Always use the four-model published CIFAKE ensemble. |
+| `AI_DETECTOR_DEVICE` | `cpu` | Force CPU inference. |
+| `GRADIO_SHARE` | `true` | Deliberately create a temporary public Gradio share link. Disabled by default. |
+
+Additional experimental modes remain available in the code but are not the default competition route.
+
+## Testing
+
+Run the automated tests from the repository root:
 
 ```powershell
 python -m pytest -q
-git status
-git add -n .
 ```
 
-This repository does not currently grant an open-source licence. Copyright remains with the repository owner.
-# ai-generated-image-detector
+Run the optional real-checkpoint integration test only when the model assets are present:
+
+```powershell
+$env:RUN_MODEL_INTEGRATION = "1"
+python -m pytest -q
+```
+
+The current local test result is **20 passed and 1 skipped** without the optional integration test.
+
+## Repository layout
+
+| Path | Purpose |
+|---|---|
+| `app/` | Gradio interface, detector selection, preprocessing, inference, and ensemble logic. |
+| `realworld_v2/` | Normal-resolution detector loading, evaluation, and training utilities. |
+| `models/` | Trackable manifests and documentation; large checkpoint files remain ignored. |
+| `notebooks/` | Baseline and hyperparameter-tuned research notebooks. |
+| `scripts/` | Asset download, validation, benchmarking, and experiment utilities. |
+| `tests/` | Automated unit and routing tests. |
+| `third_party/` | Vendored academic reference code with upstream sources and licences documented separately. |
+
+Private papers, PDFs, competition documents, presentations, figures, working documentation, datasets, checkpoints, credentials, logs, environments, and generated caches remain local and are excluded through `.gitignore`.
+
+## Responsible use and limitations
+
+- A high confidence score does not prove that an image is AI-generated or real.
+- Performance can change with resizing, compression, screenshots, editing, camera pipelines, and previously unseen generators.
+- Do not use the result as the sole basis for legal, disciplinary, journalistic, or moderation decisions.
+- Validate the detector on data representative of the intended deployment environment.
+
+## Copyright
+
+Copyright (c) 2026 Ilham Gafarov. All rights reserved.
+
+This repository is publicly visible for viewing and evaluation. No open-source licence is granted for the original project code. Permission to copy, modify, distribute, or reuse that code must be obtained in writing from the copyright holder. Third-party components remain governed by their respective licences.
