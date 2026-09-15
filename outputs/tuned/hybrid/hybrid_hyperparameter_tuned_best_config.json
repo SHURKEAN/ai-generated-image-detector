@@ -1,0 +1,27 @@
+{
+    "raw_weights": {
+        "resnet50": 0.0,
+        "efficientnetv2s": 0.05,
+        "vit16": 0.05,
+        "xception": 0.05
+    },
+    "normalized_weights": {
+        "resnet50": 0.0,
+        "efficientnetv2s": 0.3333333333333333,
+        "vit16": 0.3333333333333333,
+        "xception": 0.3333333333333333
+    },
+    "validation_metrics": {
+        "accuracy": 1.0,
+        "precision_fake_positive": 1.0,
+        "recall_fake_positive": 1.0,
+        "f1_fake_positive": 1.0,
+        "precision_real_positive": 1.0,
+        "recall_real_positive": 1.0,
+        "f1_real_positive": 1.0,
+        "weighted_precision": 1.0,
+        "weighted_recall": 1.0,
+        "weighted_f1": 1.0,
+        "macro_f1": 1.0
+    }
+}

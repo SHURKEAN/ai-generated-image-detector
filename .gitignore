@@ -1,0 +1,61 @@
+# Credentials and local secrets
+kaggle.json
+.env
+.env.*
+
+# Python/runtime files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+.python-*/
+.ipython-data/
+.jupyter/
+.jupyter-data/
+**/.ipynb_checkpoints/
+
+# Local installers, execution logs, and editor/build leftovers
+wheelhouse/
+run_logs/
+local_metadata/
+debug.log
+*.aux
+*.log
+*.out
+*.synctex.gz
+~$*.docx
+.~lock.*
+
+# Private or downloaded datasets
+data/raw/
+data/cache/
+data/private/
+data/manifests/
+data/metadata/
+validation/phone_real/
+CIFAKE_FULL/
+*.zip
+
+# Large model artifacts (manifests and documentation remain trackable)
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+models/realworld_v2/runs/
+
+# Generated evaluation and training outputs
+outputs/realworld_v2/
+outputs/**/probability_cache/
+outputs/**/*.npz
+outputs/**/hybrid_weight_tuning_results.json
+notebooks/**/models/
+notebooks/**/outputs/
+third_party/**/test_images/
+
+# Private research, competition, and presentation material
+competition_submission/
+presentations/
+research/papers/
+docs/
+figures/
+archive/

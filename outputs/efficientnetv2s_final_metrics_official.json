@@ -1,0 +1,70 @@
+{
+    "model": "torchvision.models.efficientnet_v2_s",
+    "weights": "DEFAULT ImageNet pretrained",
+    "dataset": "official full CIFAKE",
+    "class_mapping": {
+        "fake": 0,
+        "real": 1
+    },
+    "positive_label_for_precision_recall_f1": "fake",
+    "train_size": 100000,
+    "test_size": 20000,
+    "training_config": {
+        "batch_size": 16,
+        "epochs": 10,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "CrossEntropyLoss",
+        "image_size": 224
+    },
+    "history": {
+        "train_loss": [
+            0.4863440724349022,
+            0.44504085102796553,
+            0.44011098532915116,
+            0.43748210483551025,
+            0.43511610030889514,
+            0.43705438064098356,
+            0.4326905639111996,
+            0.436328655705452,
+            0.4342128114831448,
+            0.43499291647553445
+        ],
+        "train_accuracy": [
+            0.76986,
+            0.7937,
+            0.79519,
+            0.79662,
+            0.79878,
+            0.7979,
+            0.80019,
+            0.79747,
+            0.79847,
+            0.79912
+        ]
+    },
+    "final_test_metrics": {
+        "test_loss": 0.9437614901065826,
+        "accuracy": 0.75665,
+        "precision_fake_positive": 0.6976206976206977,
+        "recall_fake_positive": 0.906,
+        "f1_fake_positive": 0.7882716317918824,
+        "confusion_matrix": [
+            [
+                9060,
+                940
+            ],
+            [
+                3927,
+                6073
+            ]
+        ]
+    },
+    "saved_files": {
+        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\efficientnetv2s_final.pth",
+        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_training_curves_official.png",
+        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_confusion_matrix_official.png",
+        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_final_metrics_official.json"
+    }
+}

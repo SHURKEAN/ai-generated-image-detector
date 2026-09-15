@@ -1,0 +1,382 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.9381872614224752,
+    "validation": {
+      "threshold": 0.9898970127105714,
+      "count": 2306,
+      "real_count": 1153,
+      "ai_count": 1153,
+      "accuracy": 0.7966175195143105,
+      "balanced_accuracy": 0.7966175195143105,
+      "precision_ai": 0.9285714285714286,
+      "recall_ai": 0.6426712922810061,
+      "specificity_real": 0.9505637467476149,
+      "false_positive_rate_real": 0.049436253252385085,
+      "f1_ai": 0.7596104561763198,
+      "confusion_matrix_real_ai": [
+        [
+          1096,
+          57
+        ],
+        [
+          412,
+          741
+        ]
+      ]
+    },
+    "validation_by_source": {
+      "community_forensics_small::ai::LFM": {
+        "threshold": 0.9898970127105714,
+        "count": 1153,
+        "real_count": 0,
+        "ai_count": 1153,
+        "accuracy": 0.6426712922810061,
+        "balanced_accuracy": 0.6426712922810061,
+        "precision_ai": 1.0,
+        "recall_ai": 0.6426712922810061,
+        "specificity_real": null,
+        "false_positive_rate_real": null,
+        "f1_ai": 0.7824709609292503,
+        "confusion_matrix_real_ai": [
+          [
+            0,
+            0
+          ],
+          [
+            412,
+            741
+          ]
+        ]
+      },
+      "community_forensics_small::real::VISION": {
+        "threshold": 0.9898970127105714,
+        "count": 1153,
+        "real_count": 1153,
+        "ai_count": 0,
+        "accuracy": 0.9505637467476149,
+        "balanced_accuracy": 0.9505637467476149,
+        "precision_ai": 0.0,
+        "recall_ai": null,
+        "specificity_real": 0.9505637467476149,
+        "false_positive_rate_real": 0.049436253252385085,
+        "f1_ai": null,
+        "confusion_matrix_real_ai": [
+          [
+            1096,
+            57
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "seconds": 72.90065690001938
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.3239253294323721,
+    "validation": {
+      "threshold": 0.9841192364692689,
+      "count": 2306,
+      "real_count": 1153,
+      "ai_count": 1153,
+      "accuracy": 0.7801387684301822,
+      "balanced_accuracy": 0.7801387684301822,
+      "precision_ai": 0.925,
+      "recall_ai": 0.6097137901127494,
+      "specificity_real": 0.9505637467476149,
+      "false_positive_rate_real": 0.049436253252385085,
+      "f1_ai": 0.7349712493465762,
+      "confusion_matrix_real_ai": [
+        [
+          1096,
+          57
+        ],
+        [
+          450,
+          703
+        ]
+      ]
+    },
+    "validation_by_source": {
+      "community_forensics_small::ai::LFM": {
+        "threshold": 0.9841192364692689,
+        "count": 1153,
+        "real_count": 0,
+        "ai_count": 1153,
+        "accuracy": 0.6097137901127494,
+        "balanced_accuracy": 0.6097137901127494,
+        "precision_ai": 1.0,
+        "recall_ai": 0.6097137901127494,
+        "specificity_real": null,
+        "false_positive_rate_real": null,
+        "f1_ai": 0.7575431034482759,
+        "confusion_matrix_real_ai": [
+          [
+            0,
+            0
+          ],
+          [
+            450,
+            703
+          ]
+        ]
+      },
+      "community_forensics_small::real::VISION": {
+        "threshold": 0.9841192364692689,
+        "count": 1153,
+        "real_count": 1153,
+        "ai_count": 0,
+        "accuracy": 0.9505637467476149,
+        "balanced_accuracy": 0.9505637467476149,
+        "precision_ai": 0.0,
+        "recall_ai": null,
+        "specificity_real": 0.9505637467476149,
+        "false_positive_rate_real": 0.049436253252385085,
+        "f1_ai": null,
+        "confusion_matrix_real_ai": [
+          [
+            1096,
+            57
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "seconds": 57.78374959999928
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.2314605501490415,
+    "validation": {
+      "threshold": 0.9827401638031007,
+      "count": 2306,
+      "real_count": 1153,
+      "ai_count": 1153,
+      "accuracy": 0.764093668690373,
+      "balanced_accuracy": 0.764093668690373,
+      "precision_ai": 0.921161825726141,
+      "recall_ai": 0.577623590633131,
+      "specificity_real": 0.9505637467476149,
+      "false_positive_rate_real": 0.049436253252385085,
+      "f1_ai": 0.7100213219616205,
+      "confusion_matrix_real_ai": [
+        [
+          1096,
+          57
+        ],
+        [
+          487,
+          666
+        ]
+      ]
+    },
+    "validation_by_source": {
+      "community_forensics_small::ai::LFM": {
+        "threshold": 0.9827401638031007,
+        "count": 1153,
+        "real_count": 0,
+        "ai_count": 1153,
+        "accuracy": 0.577623590633131,
+        "balanced_accuracy": 0.577623590633131,
+        "precision_ai": 1.0,
+        "recall_ai": 0.577623590633131,
+        "specificity_real": null,
+        "false_positive_rate_real": null,
+        "f1_ai": 0.7322704782847719,
+        "confusion_matrix_real_ai": [
+          [
+            0,
+            0
+          ],
+          [
+            487,
+            666
+          ]
+        ]
+      },
+      "community_forensics_small::real::VISION": {
+        "threshold": 0.9827401638031007,
+        "count": 1153,
+        "real_count": 1153,
+        "ai_count": 0,
+        "accuracy": 0.9505637467476149,
+        "balanced_accuracy": 0.9505637467476149,
+        "precision_ai": 0.0,
+        "recall_ai": null,
+        "specificity_real": 0.9505637467476149,
+        "false_positive_rate_real": 0.049436253252385085,
+        "f1_ai": null,
+        "confusion_matrix_real_ai": [
+          [
+            1096,
+            57
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "seconds": 57.62434580002446
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.17086021528048542,
+    "validation": {
+      "threshold": 0.9806138277053834,
+      "count": 2306,
+      "real_count": 1153,
+      "ai_count": 1153,
+      "accuracy": 0.7519514310494363,
+      "balanced_accuracy": 0.7519514310494362,
+      "precision_ai": 0.9204052098408104,
+      "recall_ai": 0.5516045099739809,
+      "specificity_real": 0.9522983521248916,
+      "false_positive_rate_real": 0.047701647875108416,
+      "f1_ai": 0.6898047722342734,
+      "confusion_matrix_real_ai": [
+        [
+          1098,
+          55
+        ],
+        [
+          517,
+          636
+        ]
+      ]
+    },
+    "validation_by_source": {
+      "community_forensics_small::ai::LFM": {
+        "threshold": 0.9806138277053834,
+        "count": 1153,
+        "real_count": 0,
+        "ai_count": 1153,
+        "accuracy": 0.5516045099739809,
+        "balanced_accuracy": 0.5516045099739809,
+        "precision_ai": 1.0,
+        "recall_ai": 0.5516045099739809,
+        "specificity_real": null,
+        "false_positive_rate_real": null,
+        "f1_ai": 0.7110117384013415,
+        "confusion_matrix_real_ai": [
+          [
+            0,
+            0
+          ],
+          [
+            517,
+            636
+          ]
+        ]
+      },
+      "community_forensics_small::real::VISION": {
+        "threshold": 0.9806138277053834,
+        "count": 1153,
+        "real_count": 1153,
+        "ai_count": 0,
+        "accuracy": 0.9522983521248916,
+        "balanced_accuracy": 0.9522983521248916,
+        "precision_ai": 0.0,
+        "recall_ai": null,
+        "specificity_real": 0.9522983521248916,
+        "false_positive_rate_real": 0.047701647875108416,
+        "f1_ai": null,
+        "confusion_matrix_real_ai": [
+          [
+            1098,
+            55
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "seconds": 57.689805300033186
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.14747757209785362,
+    "validation": {
+      "threshold": 0.9762352705001832,
+      "count": 2306,
+      "real_count": 1153,
+      "ai_count": 1153,
+      "accuracy": 0.7398091934084996,
+      "balanced_accuracy": 0.7398091934084996,
+      "precision_ai": 0.9157894736842105,
+      "recall_ai": 0.5281873373807459,
+      "specificity_real": 0.9514310494362532,
+      "false_positive_rate_real": 0.04856895056374675,
+      "f1_ai": 0.66996699669967,
+      "confusion_matrix_real_ai": [
+        [
+          1097,
+          56
+        ],
+        [
+          544,
+          609
+        ]
+      ]
+    },
+    "validation_by_source": {
+      "community_forensics_small::ai::LFM": {
+        "threshold": 0.9762352705001832,
+        "count": 1153,
+        "real_count": 0,
+        "ai_count": 1153,
+        "accuracy": 0.5281873373807459,
+        "balanced_accuracy": 0.5281873373807459,
+        "precision_ai": 1.0,
+        "recall_ai": 0.5281873373807459,
+        "specificity_real": null,
+        "false_positive_rate_real": null,
+        "f1_ai": 0.6912599318955731,
+        "confusion_matrix_real_ai": [
+          [
+            0,
+            0
+          ],
+          [
+            544,
+            609
+          ]
+        ]
+      },
+      "community_forensics_small::real::VISION": {
+        "threshold": 0.9762352705001832,
+        "count": 1153,
+        "real_count": 1153,
+        "ai_count": 0,
+        "accuracy": 0.9514310494362532,
+        "balanced_accuracy": 0.9514310494362532,
+        "precision_ai": 0.0,
+        "recall_ai": null,
+        "specificity_real": 0.9514310494362532,
+        "false_positive_rate_real": 0.04856895056374675,
+        "f1_ai": null,
+        "confusion_matrix_real_ai": [
+          [
+            1097,
+            56
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "seconds": 57.7363363999757
+  }
+]

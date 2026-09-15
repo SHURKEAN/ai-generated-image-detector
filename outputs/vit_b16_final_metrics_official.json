@@ -1,0 +1,80 @@
+{
+    "model": "torchvision.models.vit_b_16",
+    "weights": "IMAGENET1K_V1",
+    "dataset": "official full CIFAKE",
+    "dataset_root": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL",
+    "train_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\train",
+    "test_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\test",
+    "class_mapping": {
+        "fake": 0,
+        "real": 1
+    },
+    "positive_label_for_precision_recall_f1": "fake",
+    "train_counts": {
+        "fake": 50000,
+        "real": 50000,
+        "total": 100000
+    },
+    "test_counts": {
+        "fake": 10000,
+        "real": 10000,
+        "total": 20000
+    },
+    "training_config": {
+        "batch_size": 16,
+        "epochs": 10,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "CrossEntropyLoss"
+    },
+    "history": {
+        "train_loss": [
+            0.34110614216208457,
+            0.26449243982553483,
+            0.2347169418156147,
+            0.21586280552387238,
+            0.2027725620138645,
+            0.19355900149703026,
+            0.18416995581269263,
+            0.17525328516721725,
+            0.17043915743350982,
+            0.16383773961663245
+        ],
+        "train_accuracy": [
+            0.84855,
+            0.88688,
+            0.90199,
+            0.90929,
+            0.9153,
+            0.91922,
+            0.92456,
+            0.92838,
+            0.92956,
+            0.93311
+        ]
+    },
+    "final_test_metrics": {
+        "test_loss": 0.10210609251260758,
+        "accuracy": 0.95945,
+        "precision_fake_positive": 0.9441275978733688,
+        "recall_fake_positive": 0.9767,
+        "f1_fake_positive": 0.9601376259523224,
+        "confusion_matrix": [
+            [
+                9767,
+                233
+            ],
+            [
+                578,
+                9422
+            ]
+        ]
+    },
+    "saved_files": {
+        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\vit_b16_final_official.pth",
+        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_training_curves_official.png",
+        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_confusion_matrix_official.png",
+        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_final_metrics_official.json"
+    }
+}

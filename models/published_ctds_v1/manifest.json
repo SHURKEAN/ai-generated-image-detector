@@ -1,0 +1,54 @@
+{
+  "model_id": "published_ctds_v1",
+  "version": "1.0.0",
+  "status": "immutable_published_baseline",
+  "dataset": "CIFAKE",
+  "task": "binary_real_vs_ai_generated",
+  "class_indices": {
+    "0": "AI-generated",
+    "1": "Real"
+  },
+  "published_test_metrics": {
+    "accuracy": 0.9907,
+    "macro_f1": 0.9906999966519988,
+    "test_images": 20000
+  },
+  "ensemble_weights": {
+    "resnet50": 0.0,
+    "efficientnetv2s": 0.3333333333333333,
+    "vit16": 0.3333333333333333,
+    "xception": 0.3333333333333333
+  },
+  "checkpoints": [
+    {
+      "model": "resnet50",
+      "path": "models/tuned/resnet50_hyperparameter_tuned_best.pth",
+      "bytes": 94375393,
+      "sha256": "7ec98f1d25226dddf9733563a10f78afd7348afcf878f30c632495f5838f7015"
+    },
+    {
+      "model": "efficientnetv2s",
+      "path": "models/tuned/efficientnetv2s_hyperparameter_tuned_best.pth",
+      "bytes": 81647883,
+      "sha256": "da491fe8034700470467a2ad697f66d7e13836dbce690da212435b3d9623bf59"
+    },
+    {
+      "model": "vit16",
+      "path": "models/tuned/vit16_hyperparameter_tuned_best.pth",
+      "bytes": 343265439,
+      "sha256": "e227f0bb9a70e4f610a6fb7afca8056d03e33da4006d7398f9da08d53d17a889"
+    },
+    {
+      "model": "xception",
+      "path": "models/tuned/xception_hyperparameter_tuned_best.pth",
+      "bytes": 83560597,
+      "sha256": "3bc43f72ed5d33dea8ef57ccdacfc08bc4ebb2ac3b5bfc9d5d8151e9e1b9d5f3"
+    }
+  ],
+  "limitations": [
+    "The baseline was trained and evaluated on CIFAKE.",
+    "Its confidence is not calibrated for arbitrary phone photographs or unseen generators.",
+    "It must not be represented as a universal forensic detector."
+  ]
+}
+

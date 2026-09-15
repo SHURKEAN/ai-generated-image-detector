@@ -1,0 +1,81 @@
+{
+    "model": "timm.create_model(\"legacy_xception\")",
+    "weights": "ImageNet pretrained",
+    "dataset": "official full CIFAKE",
+    "dataset_root": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL",
+    "train_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\train",
+    "test_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\test",
+    "class_mapping": {
+        "fake": 0,
+        "real": 1
+    },
+    "positive_label_for_precision_recall_f1": "fake",
+    "train_counts": {
+        "fake": 50000,
+        "real": 50000,
+        "total": 100000
+    },
+    "test_counts": {
+        "fake": 10000,
+        "real": 10000,
+        "total": 20000
+    },
+    "training_config": {
+        "batch_size": 16,
+        "epochs": 10,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "CrossEntropyLoss",
+        "image_size": 299
+    },
+    "history": {
+        "train_loss": [
+            0.27334436601400375,
+            0.20712584224939345,
+            0.181586036247015,
+            0.16563826621890068,
+            0.15635367351293564,
+            0.1464565566432476,
+            0.13808544175386428,
+            0.13078726207852365,
+            0.12812884814977646,
+            0.12274897324085235
+        ],
+        "train_accuracy": [
+            0.884,
+            0.91569,
+            0.92695,
+            0.93294,
+            0.93644,
+            0.94113,
+            0.94446,
+            0.94713,
+            0.94791,
+            0.95063
+        ]
+    },
+    "final_test_metrics": {
+        "test_loss": 0.060972529542446134,
+        "accuracy": 0.97755,
+        "precision_fake_positive": 0.9755053270934979,
+        "recall_fake_positive": 0.9797,
+        "f1_fake_positive": 0.9775981639475129,
+        "confusion_matrix": [
+            [
+                9797,
+                203
+            ],
+            [
+                246,
+                9754
+            ]
+        ]
+    },
+    "saved_files": {
+        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\xception_final_official.pth",
+        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\xception_training_curves_official.png",
+        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\xception_confusion_matrix_official.png",
+        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\xception_final_metrics_official.json"
+    }
+}

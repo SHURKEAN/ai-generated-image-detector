@@ -1,0 +1,68 @@
+{
+    "model": "torchvision.models.resnet50",
+    "weights": "DEFAULT ImageNet pretrained",
+    "dataset": "official full CIFAKE",
+    "class_mapping": {
+        "fake": 0,
+        "real": 1
+    },
+    "positive_label_for_precision_recall_f1": "fake",
+    "training_config": {
+        "batch_size": 16,
+        "epochs": 10,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "CrossEntropyLoss",
+        "image_size": 224
+    },
+    "history": {
+        "train_loss": [
+            0.14965258672144263,
+            0.08820721059727482,
+            0.0662123361377092,
+            0.054401218589874914,
+            0.043507831938198654,
+            0.036645657787825914,
+            0.03161941624691448,
+            0.02630783283915196,
+            0.023639004917863058,
+            0.02123487768185232
+        ],
+        "train_accuracy": [
+            0.94215,
+            0.96676,
+            0.97512,
+            0.97966,
+            0.98359,
+            0.98613,
+            0.98849,
+            0.99029,
+            0.99112,
+            0.99232
+        ]
+    },
+    "final_test_metrics": {
+        "accuracy": 0.98125,
+        "precision_fake_positive": 0.9820695181809076,
+        "recall_fake_positive": 0.9804,
+        "f1_fake_positive": 0.9812340489416004,
+        "confusion_matrix": [
+            [
+                9804,
+                196
+            ],
+            [
+                179,
+                9821
+            ]
+        ],
+        "test_loss": 0.05666407166514482
+    },
+    "saved_files": {
+        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\resnet50_best_10epochs.pth",
+        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_training_curves.png",
+        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_confusion_matrix.png",
+        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_final_metrics.json"
+    }
+}

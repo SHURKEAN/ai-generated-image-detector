@@ -1,0 +1,29 @@
+{
+  "backbone": {
+    "name": "OpenAI CLIP ViT-L/14",
+    "path": "models/realworld_v2/upstream/ViT-L-14.pt",
+    "bytes": 932768134,
+    "sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+    "source": "https://openaipublic.azureedge.net/clip/models/b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836/ViT-L-14.pt"
+  },
+  "academic_reference_head": {
+    "name": "UniversalFakeDetect CVPR 2023 linear head",
+    "path": "third_party/UniversalFakeDetect/pretrained_weights/fc_weights.pth",
+    "bytes": 4083,
+    "sha256": "477100745713bcc957beb2b40859536859b6483fd6301b3b9293151b194c7847",
+    "source": "https://github.com/WisconsinAIVision/UniversalFakeDetect",
+    "usage_track": "academic_only"
+  },
+  "community_forensics_detector": {
+    "name": "Community Forensics ViT-S/16 384 CVPR 2025",
+    "revision": "6076002bf0d9dd37537f965ee2f06f826c333b61",
+    "path": "models/realworld_v2/upstream/commfor-model-384.safetensors",
+    "bytes": 87262324,
+    "sha256": "b89f36275f3bf5e2b040eee36597a8f19db051bff9a473a9cf7b2466284fb387",
+    "config_path": "models/realworld_v2/upstream/commfor-model-384.config.json",
+    "config_sha256": "877416e73aac0fdbc1be723f5ddf674e78a2350305865ad9031564b287b60147",
+    "source": "https://huggingface.co/OwensLab/commfor-model-384",
+    "model_card_license": "MIT",
+    "usage_track": "academic_reference"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "instructions": "Enable a source only after its license/provenance and split are decided. A source_id must belong to exactly one split.",
+  "include_registries": [
+    "registries/community_forensics_small.json"
+  ],
+  "sources": [
+    {
+      "enabled": true,
+      "path": "validation/phone_real/photo_01.jpg.jpeg",
+      "label": "real",
+      "source_id": "phone_photo_external_001",
+      "source_kind": "camera_photo",
+      "generator_or_camera": "private_phone_camera",
+      "license": "private-evaluation-only",
+      "license_url": "local-consent-record-required-before-redistribution",
+      "usage_track": "private_evaluation",
+      "consent_status": "private_evaluation_only",
+      "split": "external_test",
+      "notes": "Known genuine phone photograph that exposed the CIFAKE baseline domain shift. Never use for training or threshold selection."
+    },
+    {
+      "enabled": true,
+      "path": "third_party/Community-Forensics/test_images",
+      "label": "ai",
+      "source_id": "community_forensics_official_dalle2_examples",
+      "source_kind": "ai_generator",
+      "generator_or_camera": "DALL-E 2 official Community Forensics examples",
+      "license": "academic-evaluation-only",
+      "license_url": "https://github.com/JeongsooP/Community-Forensics",
+      "usage_track": "academic_only",
+      "consent_status": "not_applicable",
+      "split": "external_test",
+      "notes": "Five AI examples provided by the official detector authors. Evaluation only; never train or calibrate on these files."
+    },
+    {
+      "enabled": false,
+      "path": "data/raw/product_safe/real/camera_source_train",
+      "label": "real",
+      "source_id": "replace_with_real_train_source",
+      "source_kind": "camera_photo",
+      "generator_or_camera": "record_device_or_collection",
+      "license": "replace_with_verified_license",
+      "license_url": "replace_with_license_or_consent_document",
+      "usage_track": "product_safe",
+      "consent_status": "replace_with_consent_status",
+      "split": "train",
+      "notes": "Template only. Do not enable until every field is verified."
+    },
+    {
+      "enabled": false,
+      "path": "data/raw/product_safe/ai/generator_source_train",
+      "label": "ai",
+      "source_id": "replace_with_ai_train_generator",
+      "source_kind": "ai_generator",
+      "generator_or_camera": "record_generator_and_version",
+      "license": "replace_with_verified_generation_terms",
+      "license_url": "replace_with_generator_terms_url",
+      "usage_track": "product_safe",
+      "consent_status": "not_applicable",
+      "split": "train",
+      "notes": "Template only. Prompts and generation settings should be retained separately."
+    }
+  ]
+}

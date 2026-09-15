@@ -1,0 +1,78 @@
+{
+    "model": "weighted soft-voting hybrid ensemble",
+    "members": [
+        "efficientnetv2s",
+        "resnet50",
+        "vit_b16",
+        "xception"
+    ],
+    "class_mapping": {
+        "fake": 0,
+        "real": 1
+    },
+    "dataset": "official full CIFAKE",
+    "validation_samples": 4000,
+    "test_samples": 20000,
+    "inference_config": {
+        "batch_size": 16
+    },
+    "weights": {
+        "efficientnetv2s": 0.09090909090909091,
+        "resnet50": 0.45454545454545453,
+        "vit_b16": 0.0,
+        "xception": 0.45454545454545453
+    },
+    "validation_accuracy_for_selected_weights": 0.998,
+    "individual_model_results": {
+        "efficientnetv2s": {
+            "val_accuracy": 0.76025,
+            "test_accuracy": 0.75665,
+            "test_precision_fake_positive": 0.6976511359260685,
+            "test_recall_fake_positive": 0.9059,
+            "test_f1_fake_positive": 0.7882532086143137
+        },
+        "resnet50": {
+            "val_accuracy": 0.9955,
+            "test_accuracy": 0.98125,
+            "test_precision_fake_positive": 0.9821661156196774,
+            "test_recall_fake_positive": 0.9803,
+            "test_f1_fake_positive": 0.9812321705620339
+        },
+        "vit_b16": {
+            "val_accuracy": 0.968,
+            "test_accuracy": 0.95945,
+            "test_precision_fake_positive": 0.9441275978733688,
+            "test_recall_fake_positive": 0.9767,
+            "test_f1_fake_positive": 0.9601376259523224
+        },
+        "xception": {
+            "val_accuracy": 0.98575,
+            "test_accuracy": 0.9775,
+            "test_precision_fake_positive": 0.9755028878709421,
+            "test_recall_fake_positive": 0.9796,
+            "test_f1_fake_positive": 0.9775471509829359
+        }
+    },
+    "hybrid_test_metrics": {
+        "accuracy": 0.98565,
+        "precision_fake_positive": 0.9838597190395536,
+        "recall_fake_positive": 0.9875,
+        "f1_fake_positive": 0.985676498477816,
+        "confusion_matrix": [
+            [
+                9875,
+                125
+            ],
+            [
+                162,
+                9838
+            ]
+        ]
+    },
+    "saved_files": {
+        "metrics_json": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_final_metrics_official.json",
+        "test_predictions_npz": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_test_predictions_official.npz",
+        "confusion_matrix": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_confusion_matrix_official.png",
+        "probability_cache_dir": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\probability_cache"
+    }
+}

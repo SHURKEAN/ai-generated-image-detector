@@ -1,0 +1,4 @@
+-r requirements-app.txt
+numpy>=1.26,<3
+datasets==3.6.0
+pyarrow==19.0.1
