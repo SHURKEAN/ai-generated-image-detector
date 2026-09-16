@@ -60,9 +60,9 @@
         "test_loss": 0.05666407166514482
     },
     "saved_files": {
-        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\resnet50_best_10epochs.pth",
-        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_training_curves.png",
-        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_confusion_matrix.png",
-        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\resnet50_final_metrics.json"
+        "model_weights": ".\\models\\resnet50_best_10epochs.pth",
+        "training_curves": ".\\outputs\\resnet50_training_curves.png",
+        "confusion_matrix": ".\\outputs\\resnet50_confusion_matrix.png",
+        "metrics_json": ".\\outputs\\resnet50_final_metrics.json"
     }
 }

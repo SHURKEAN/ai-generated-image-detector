@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper for the academic experiments. Citation does not grant reuse permissions for the original project code."
+type: software
+title: "AI-Generated Image Detector"
+authors:
+  - family-names: "Gafarov"
+    given-names: "Ilham"
+repository-code: "https://github.com/SHURKEAN/ai-generated-image-detector"
+url: "https://github.com/SHURKEAN/ai-generated-image-detector"
+abstract: "CIFAKE research experiments and a later Gradio application extension for probabilistic real-versus-AI image screening."
+keywords:
+  - "AI-generated image detection"
+  - "CIFAKE"
+  - "deep learning"
+  - "ensemble learning"
+preferred-citation:
+  type: conference-paper
+  title: "Hyperparameter-Aware Evaluation of Deep Learning Architectures for AI-Generated Image Detection"
+  authors:
+    - family-names: "Qasem"
+      given-names: "Zeyad"
+    - family-names: "Gafarov"
+      given-names: "Ilham"
+    - family-names: "Al-Hamadani"
+      given-names: "Mokhaled N. A."
+  collection-title: "2026 IEEE 4th Conference on Information Technology and Data Science (CITDS 2026)"
+  year: 2026

@@ -61,5 +61,5 @@
             "support": 20000.0
         }
     },
-    "checkpoint": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\tuned\\resnet50_hyperparameter_tuned_best.pth"
+    "checkpoint": ".\\models\\tuned\\resnet50_hyperparameter_tuned_best.pth"
 }

@@ -4,7 +4,7 @@
     "tuning_design": {
         "tuning_train_images": 4000,
         "tuning_validation_images": 1000,
-        "final_test_split": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\test"
+        "final_test_split": ".\\CIFAKE_FULL\\test"
     },
     "candidate_values": [
         0.0,

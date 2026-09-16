@@ -61,5 +61,5 @@
             "support": 20000.0
         }
     },
-    "checkpoint": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\tuned\\xception_hyperparameter_tuned_best.pth"
+    "checkpoint": ".\\models\\tuned\\xception_hyperparameter_tuned_best.pth"
 }

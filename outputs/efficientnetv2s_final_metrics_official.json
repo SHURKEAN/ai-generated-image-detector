@@ -62,9 +62,9 @@
         ]
     },
     "saved_files": {
-        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\efficientnetv2s_final.pth",
-        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_training_curves_official.png",
-        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_confusion_matrix_official.png",
-        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\efficientnetv2s_final_metrics_official.json"
+        "model_weights": ".\\models\\efficientnetv2s_final.pth",
+        "training_curves": ".\\outputs\\efficientnetv2s_training_curves_official.png",
+        "confusion_matrix": ".\\outputs\\efficientnetv2s_confusion_matrix_official.png",
+        "metrics_json": ".\\outputs\\efficientnetv2s_final_metrics_official.json"
     }
 }

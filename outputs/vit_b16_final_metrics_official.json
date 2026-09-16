@@ -2,9 +2,9 @@
     "model": "torchvision.models.vit_b_16",
     "weights": "IMAGENET1K_V1",
     "dataset": "official full CIFAKE",
-    "dataset_root": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL",
-    "train_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\train",
-    "test_dir": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\CIFAKE_FULL\\test",
+    "dataset_root": ".\\CIFAKE_FULL",
+    "train_dir": ".\\CIFAKE_FULL\\train",
+    "test_dir": ".\\CIFAKE_FULL\\test",
     "class_mapping": {
         "fake": 0,
         "real": 1
@@ -72,9 +72,9 @@
         ]
     },
     "saved_files": {
-        "model_weights": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\models\\vit_b16_final_official.pth",
-        "training_curves": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_training_curves_official.png",
-        "confusion_matrix": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_confusion_matrix_official.png",
-        "metrics_json": "C:\\Users\\Carter\\Desktop\\Colab Notebooks\\outputs\\vit_b16_final_metrics_official.json"
+        "model_weights": ".\\models\\vit_b16_final_official.pth",
+        "training_curves": ".\\outputs\\vit_b16_training_curves_official.png",
+        "confusion_matrix": ".\\outputs\\vit_b16_confusion_matrix_official.png",
+        "metrics_json": ".\\outputs\\vit_b16_final_metrics_official.json"
     }
 }

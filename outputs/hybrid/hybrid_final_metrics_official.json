@@ -70,9 +70,9 @@
         ]
     },
     "saved_files": {
-        "metrics_json": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_final_metrics_official.json",
-        "test_predictions_npz": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_test_predictions_official.npz",
-        "confusion_matrix": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\hybrid_confusion_matrix_official.png",
-        "probability_cache_dir": "C:\\Users\\JCODER\\Desktop\\Colab Notebooks\\outputs\\hybrid\\probability_cache"
+        "metrics_json": ".\\outputs\\hybrid\\hybrid_final_metrics_official.json",
+        "test_predictions_npz": ".\\outputs\\hybrid\\hybrid_test_predictions_official.npz",
+        "confusion_matrix": ".\\outputs\\hybrid\\hybrid_confusion_matrix_official.png",
+        "probability_cache_dir": ".\\outputs\\hybrid\\probability_cache"
     }
 }
