@@ -4,15 +4,19 @@ A research-to-application project for detecting AI-generated images, developed f
 
 **Research result: 99.07% accuracy on the balanced 20,000-image CIFAKE test set.** This is not 99.07% universal real-world accuracy. The later application and cross-generator work are separate from the experiments reported in the paper.
 
-## Associated research
+## Associated Research
 
 **Paper:** *Hyperparameter-Aware Evaluation of Deep Learning Architectures for AI-Generated Image Detection*
 
-**Paper authors:** Zeyad Qasem, Ilham Gafarov, and Mokhaled N. A. Al-Hamadani.
+**Authors:** Ilham Gafarov, Zakarya Qasem, Kerem Düzenli, Balázs Harangi, and Mokhaled N. A. Al-Hamadani.
 
 **Conference:** [2026 IEEE 4th Conference on Information Technology and Data Science (CITDS 2026)](https://citds.inf.unideb.hu/), Debrecen, Hungary, 27-28 August 2026.
 
-**IEEE Xplore and DOI:** Final article links have not yet been recorded in this repository. They will be added once verified; this does not imply a claim about the current indexing status.
+**Publication status:** The [University of Debrecen publication database](https://tudoster.unideb.hu/en/szerzok/5404) currently lists the proceedings paper as **"Accepted by Publisher"**. This is not a claim that the final IEEE Xplore record is already available.
+
+**IEEE Xplore:** Coming soon
+
+**DOI:** Coming soon
 
 ## Research foundation and application extension
 
@@ -178,7 +182,7 @@ Broader evaluation must be reported separately from the CIFAKE result. Prioritie
 
 ## Citation
 
-Refer to [CITATION.cff](CITATION.cff) for repository and paper citation metadata. The paper attribution includes all three authors; the application repository maintainer is Ilham Gafarov. Final DOI, page numbers, and IEEE Xplore identifiers are intentionally omitted until verified. Citation does not grant permission to reuse restricted project code.
+Refer to [CITATION.cff](CITATION.cff) for repository and paper citation metadata. The paper attribution includes all five authors in the official publication-record order; the application repository maintainer is Ilham Gafarov. Final DOI, page numbers, and IEEE Xplore identifiers are intentionally omitted until verified. Citation does not grant permission to reuse restricted project code.
 
 ## Responsible use and limitations
 

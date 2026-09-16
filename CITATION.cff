@@ -17,10 +17,14 @@ preferred-citation:
   type: conference-paper
   title: "Hyperparameter-Aware Evaluation of Deep Learning Architectures for AI-Generated Image Detection"
   authors:
-    - family-names: "Qasem"
-      given-names: "Zeyad"
     - family-names: "Gafarov"
       given-names: "Ilham"
+    - family-names: "Qasem"
+      given-names: "Zakarya"
+    - family-names: "Düzenli"
+      given-names: "Kerem"
+    - family-names: "Harangi"
+      given-names: "Balázs"
     - family-names: "Al-Hamadani"
       given-names: "Mokhaled N. A."
   collection-title: "2026 IEEE 4th Conference on Information Technology and Data Science (CITDS 2026)"
